@@ -1,18 +1,29 @@
-def main(num1, num2, sign):
-    if sign == "+":
-        print(num1+num2)
-    elif sign == "-" :
-        print (num1-num2)
-    elif sign == "*" :
-        print(num1*num2)
-    elif sign == "/" :
-        print(num1/num2)
-    else:
-        print("Error: Try again!")
+import os
+import time
 
-        
-if __name__ == "__main__":
-    number1 = int(input("Введите первое число:"))
-    number2 = int(input("Введите второе число:"))
+def clear():
+    if os.name == "NT" or "nt":
+        os.system("cls")
+    else:
+        os.system("clear")
+
+
+def calc(num1, num2, sign):
+    return f"{num1}{sign}{num2}"
+
+
+def main():
+    num1 = int(input("Введите первое число:"))
+    num2 = int(input("Введите второе число:"))
     sign = (input("Введите знак:"))
-    main(num1=number1, num2=number2, sign=sign)
+    if sign in ["-", "+", "/", "*", "**"]:
+        print("Ответ: ", calc(num1=num1, num2=num2, sign=sign))
+    else:
+        print("Ошибка: заданное значение переменной sign не находится в signs!")
+        time.sleep(3)
+        clear()
+        main()
+
+
+if __name__ == "__main__":
+    main()
