@@ -1,11 +1,18 @@
-number1 = int(input("Введите первое число:"))
-number2 = int(input("Введите второе число:"))
-sign = (input("Введите знак:"))
-if sign == "+":
-    print(number1+number2)
-if sign == "-" :
-    print (number1-number2)
-if sign == "*" :
-    print(number1*number2)
-if sign == "/" :
-    print(number1/number2)
+def main(num1, num2, sign):
+    if sign == "+":
+        print(number1+number2)
+    elif sign == "-" :
+        print (number1-number2)
+    elif sign == "*" :
+        print(number1*number2)
+    elif sign == "/" :
+        print(number1/number2)
+    else:
+        print("Error: Try again!")
+
+        
+if __name__ == "__main__":
+    number1 = int(input("Введите первое число:"))
+    number2 = int(input("Введите второе число:"))
+    sign = (input("Введите знак:"))
+    main(num1=number1, num2=number2, sign=sign)
