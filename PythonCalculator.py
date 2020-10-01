@@ -1,12 +1,12 @@
 def main(num1, num2, sign):
     if sign == "+":
-        print(number1+number2)
+        print(num1+num2)
     elif sign == "-" :
-        print (number1-number2)
+        print (num1-num2)
     elif sign == "*" :
-        print(number1*number2)
+        print(num1*num2)
     elif sign == "/" :
-        print(number1/number2)
+        print(num1/num2)
     else:
         print("Error: Try again!")
 
